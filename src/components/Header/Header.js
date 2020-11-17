@@ -16,13 +16,13 @@ const Nav = () => {
 
 export default function Header () {
   return (
-    <div className={styles.header}>
+    <header className={styles.header}>
       <h1 className={styles.logo}>Nathan Jen</h1>
       <Nav />
       <div className={styles.lightsaberContainer}>
         <img src={Lightsaber} alt='Lightsaber' />
       </div>
-    </div>
+    </header>
   )
 }
 

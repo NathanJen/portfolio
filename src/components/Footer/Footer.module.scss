@@ -1,0 +1,27 @@
+footer {
+  padding: 20px;
+}
+
+.iconRow {
+  display: flex;
+  justify-content: center;
+}
+
+.iconContainer {
+  width: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  img {
+    width: 100%;
+  }
+}
+
+p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  margin-top: 15px;
+}
