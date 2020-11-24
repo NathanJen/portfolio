@@ -1,13 +1,14 @@
 import React from 'react'
 import styles from './Header.module.scss'
 import Lightsaber from '../../assets/Header/lightsaber.png'
+import Resume from '../../assets/Header/Jen_Nathan_Resume.pdf'
 
 const Nav = () => {
   return (
     <nav>
       <ul>
         <li>My Journey</li>
-        <li>Resume</li>
+        <li><a href={Resume} rel="noreferrer" target="_blank">Resume</a></li>
         <li>About</li>
       </ul>
     </nav>

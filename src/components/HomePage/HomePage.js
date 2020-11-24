@@ -11,8 +11,8 @@ function Intro () {
         <h1>Hi! I'm Nathan</h1>
         <p>
           I'm a <b>Designer</b> and <b>Developer</b> who is 
-          currently a Master of HCI candidate at
-          <a href='https://www.hcii.cmu.edu/' className={styles.cmu}> Carnegie Mellon</a>.
+          currently a Master of HCI student at&nbsp;
+          <a href='https://www.hcii.cmu.edu/' className={styles.cmu}>Carnegie Mellon</a>.
         </p>
       </div>
       <div className={styles.headshotContainer}>
@@ -57,7 +57,7 @@ function ProjectsCard ({ name, description, category, dates, image }) {
         <p className={styles.projectLink}>See More</p>
       </div>
       <div className={styles.projectImageContainer}>
-        <img src={image} alt="Project" />
+        <img src={image} alt="Project Hero" />
       </div>
     </div>
   )
