@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './HomePage.module.scss'
 import Headshot from '../../assets/HomePage/headshot.png'
 import Baseball from '../../assets/HomePage/baseball.png'
+import FilmFestival from '../../assets/HomePage/filmfestival.png'
 
 function Intro () {
   return (
@@ -31,6 +32,13 @@ function Projects () {
         category="UX/UI Design"
         dates="Oct - Dec 2018"
         image={Baseball}
+      />
+      <ProjectsCard 
+        name="CMU-IFF 2020 Festival Website"
+        description="Implementing the 2020 website for the Carnegie Mellon International Film Festival using HTML, CSS, and Javascript."
+        category="UI Engineering"
+        dates="Jan 2019 - Present"
+        image={FilmFestival}
       />
     </div>
   )
