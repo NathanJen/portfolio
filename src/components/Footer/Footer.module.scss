@@ -1,5 +1,16 @@
 footer {
+  margin-top: 100px;
   padding: 20px;
+  border-top: 2px solid #C4C4C4;
+
+  p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    margin-top: 15px;
+  }
 }
 
 .iconRow {
@@ -15,13 +26,4 @@ footer {
   img {
     width: 100%;
   }
-}
-
-p {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 27px;
-  text-align: center;
-  margin-top: 15px;
 }

@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './Footer.module.scss'
-import { NavLink } from 'react-router-dom'
 import LinkedIn from '../../assets/Footer/linkedin.png'
 import Instagram from '../../assets/Footer/instagram.png'
 import Letterboxd from '../../assets/Footer/film.png'
