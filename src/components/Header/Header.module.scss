@@ -4,6 +4,14 @@
   align-items: center;
   border-bottom: 2px solid #C4C4C4;
   padding: 20px 0 20px 0;
+
+  a {
+    color: black;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 .logo {

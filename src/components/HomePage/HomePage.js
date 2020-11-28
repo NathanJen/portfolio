@@ -65,7 +65,7 @@ function ProjectsCard ({ name, description, category, dates, image }) {
 
 export default function HomePage () {
   return (
-    <div className={styles.contentContainer}>
+    <div className='contentContainer'>
       <Intro />
       <Projects />
     </div>

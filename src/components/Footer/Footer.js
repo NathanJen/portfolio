@@ -28,7 +28,7 @@ const IconRow = () => {
   return (
     <div className={styles.iconRow}>
       {footerIcons.map((icon, index) =>
-        <a href={icon.link} className={styles.iconContainer} key={index}>
+        <a href={icon.link} rel="noreferrer" target="_blank" className={styles.iconContainer} key={index}>
           <img src={icon.icon} alt='Footer' />
         </a>  
       )}

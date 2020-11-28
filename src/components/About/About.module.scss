@@ -1,0 +1,64 @@
+.aboutRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 75px;
+
+  .aboutImageContainer {
+    width: 35%;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+
+  .aboutTextContainer {
+    width: 60%;
+
+    h1 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 71px;
+      color: #1D90FF;
+      margin-bottom: 30px;
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.contactContainer {
+  width: 62%;
+  margin-left: 19%;
+  margin-top: 80px;
+  background-color: #F6F7FA;
+  border-radius: 20px;
+  padding: 40px;
+
+  h6 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 30px;
+  }
+
+  .linksRow {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+
+    a {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 32px;
+      text-decoration-line: underline;
+      color: #1D90FF;
+    }
+  }
+}
