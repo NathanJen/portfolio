@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer'
 import HomePage from './components/HomePage/HomePage'
 import About from './components/About/About'
 import Journey from './components/Journey/Journey'
+import FilmFestival from './components/Projects/FilmFestival'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Switch>
         <Route exact path='/about' component={About} />
         <Route exact path='/journey' component={Journey} />
+        <Route exact path='/work/cmu-iff' component={FilmFestival} />
         <Route exact path='/' component={HomePage} />
       </Switch>
       <Footer />

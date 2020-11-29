@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from './HomePage.module.scss'
+import { NavLink } from "react-router-dom"
 import Headshot from '../../assets/HomePage/headshot.png'
 import Baseball from '../../assets/HomePage/baseball.png'
 import FilmFestival from '../../assets/HomePage/filmfestival.png'
@@ -32,6 +33,7 @@ function Projects () {
         category="UX/UI Design"
         dates="Oct - Dec 2018"
         image={Baseball}
+        link='/'
       />
       <ProjectsCard 
         name="CMU-IFF 2020 Festival Website"
@@ -39,27 +41,30 @@ function Projects () {
         category="UI Engineering"
         dates="Jan 2019 - Present"
         image={FilmFestival}
+        link='/work/cmu-iff'
       />
     </div>
   )
 }
 
-function ProjectsCard ({ name, description, category, dates, image }) {
+function ProjectsCard ({ name, description, category, dates, image, link }) {
   return (
-    <div className={styles.projectsCard}>
-      <div className={styles.projectInfo}>
-        <div className={styles.row}>
-          <p className={styles.category}>{category}</p>
-          <p className={styles.dates}>{dates}</p>
+    <NavLink to={link}>
+      <div className={styles.projectsCard}>
+        <div className={styles.projectInfo}>
+          <div className={styles.row}>
+            <p className={styles.category}>{category}</p>
+            <p className={styles.dates}>{dates}</p>
+          </div>
+          <h1 className={styles.name}>{name}</h1>
+          <p className={styles.description}>{description}</p>
+          <p className={styles.projectLink}>See More</p>
         </div>
-        <h1 className={styles.name}>{name}</h1>
-        <p className={styles.description}>{description}</p>
-        <p className={styles.projectLink}>See More</p>
+        <div className={styles.projectImageContainer}>
+          <img src={image} alt="Project Hero" />
+        </div>
       </div>
-      <div className={styles.projectImageContainer}>
-        <img src={image} alt="Project Hero" />
-      </div>
-    </div>
+    </NavLink>
   )
 }
 

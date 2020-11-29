@@ -13,7 +13,7 @@ function Intro () {
         <h1>So, who am I?</h1>
         <p>
           I’m a Designer and Devloper and currently pursuing a Master of HCI at CMU. I also just recently 
-          graduated from CMU with a degree in Information Systems. (RIP Graduation 2020 💀)
+          graduated from CMU with a degree in Information Systems.
         </p>
         <p>
           While I don’t consider myself a designer in the traditional sense, I constantly strive to solve 
