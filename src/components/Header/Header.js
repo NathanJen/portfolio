@@ -8,7 +8,7 @@ const Nav = () => {
   return (
     <nav>
       <ul>
-        <li>My Journey</li>
+        <li><NavLink to='/journey'>My Journey</NavLink></li>
         <li><a href={Resume} rel="noreferrer" target="_blank">Resume</a></li>
         <li><NavLink to='/about'>About</NavLink></li>
       </ul>

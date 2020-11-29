@@ -6,13 +6,13 @@ import FilmFestival from '../../assets/HomePage/filmfestival.png'
 
 function Intro () {
   return (
-    <div className={styles.row}>
+    <div className={styles.introRow}>
       <div className={styles.introText}>
         <h1>Hi! I'm Nathan</h1>
         <p>
           I'm a <b>Designer</b> and <b>Developer</b> who is 
           currently a Master of HCI student at&nbsp;
-          <a href='https://www.hcii.cmu.edu/' className={styles.cmu}>Carnegie Mellon</a>.
+          <a href='https://www.hcii.cmu.edu/' className={styles.cmu} rel="noreferrer" target="_blank">Carnegie Mellon</a>.
         </p>
       </div>
       <div className={styles.headshotContainer}>
