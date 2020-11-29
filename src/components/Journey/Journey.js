@@ -4,6 +4,7 @@ import Plant from '../../assets/Journey/growing.png'
 import Design from '../../assets/Journey/paint-palette.png'
 import Dev from '../../assets/Journey/coding.png'
 import Fabrication from '../../assets/Journey/3d-printer.png'
+import DesignTimeline from './DesignTimeline'
 
 function Intro () {
   return (
@@ -38,13 +39,14 @@ function CategoryCard ({ img, alt, name }) {
 export default function Journey () {
   return (
     <div className='contentContainer'>
-      <h1>My Journey</h1>
+      <h1 className={styles.title}>My Journey</h1>
       <Intro />
       <div className={styles.categoryRow}>
         <CategoryCard img={Design} alt="Paintbrush and paint palette" name="Design" />
         <CategoryCard img={Dev} alt="Coding text editor" name="Development" />
         <CategoryCard img={Fabrication} alt="3D printer" name="Fabrication" />
       </div>
+      <DesignTimeline />
     </div>
   )
 }
