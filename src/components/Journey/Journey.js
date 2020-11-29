@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Journey.module.scss'
 import Plant from '../../assets/Journey/growing.png'
 import Design from '../../assets/Journey/paint-palette.png'
 import Dev from '../../assets/Journey/coding.png'
 import Fabrication from '../../assets/Journey/3d-printer.png'
 import DesignTimeline from './DesignTimeline'
+import DevTimeline from './DevTimeline'
+import FabTimeline from './FabricationTimeline'
 
 function Intro () {
   return (
@@ -19,17 +21,16 @@ function Intro () {
         </p>
         <p>
           In this page, I want to showcase previous work that is imperfect so that I can reflect and learn more 
-          from my past experiences. Additionally, I want to inspire others by showing where I started from Additionally
-          where hard work took me. 
+          from my past experiences.
         </p>
       </div>
     </div>
   )
 }
 
-function CategoryCard ({ img, alt, name }) {
+function CategoryCard ({ img, alt, name, onclick }) {
   return (
-    <div className={styles.categoryCard}>
+    <div className={styles.categoryCard} onClick={() => onclick(name)}>
       <img src={img} alt={alt} />
       <h2>{name}</h2>
     </div>
@@ -37,16 +38,20 @@ function CategoryCard ({ img, alt, name }) {
 }
 
 export default function Journey () {
+  const [category, setCategory] = useState('Design');
+
   return (
     <div className='contentContainer'>
       <h1 className={styles.title}>My Journey</h1>
       <Intro />
       <div className={styles.categoryRow}>
-        <CategoryCard img={Design} alt="Paintbrush and paint palette" name="Design" />
-        <CategoryCard img={Dev} alt="Coding text editor" name="Development" />
-        <CategoryCard img={Fabrication} alt="3D printer" name="Fabrication" />
+        <CategoryCard img={Design} alt="Paintbrush and paint palette" name="Design" onclick={setCategory} />
+        <CategoryCard img={Dev} alt="Coding text editor" name="Development" onclick={setCategory} />
+        <CategoryCard img={Fabrication} alt="3D printer" name="Fabrication" onclick={setCategory} />
       </div>
-      <DesignTimeline />
+      {category === 'Design' && <DesignTimeline />}
+      {category === 'Development' && <DevTimeline />}
+      {category === 'Fabrication' && <FabTimeline />}
     </div>
   )
 }
