@@ -12,7 +12,7 @@ const styles = {
     fontSize: '48px',
     fontWeight: 'bold',
     textAlign: 'center',
-    wordSpacing: '20px'
+    wordSpacing: '10px'
   },
   row: {
     marginTop: '70px',

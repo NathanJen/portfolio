@@ -33,7 +33,7 @@ function Projects () {
         category="UX/UI Design"
         dates="Oct - Dec 2018"
         image={Baseball}
-        link='/'
+        link='/work/little-league'
       />
       <ProjectsCard 
         name="CMU-IFF 2020 Festival Website"

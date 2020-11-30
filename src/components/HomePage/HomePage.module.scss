@@ -56,6 +56,10 @@
     color: #000000;
     margin-bottom: 50px;
   }
+
+  a:hover {
+    text-decoration: none;
+  }
 }
 
 .projectsCard {
@@ -67,6 +71,7 @@
   justify-content: space-between;
   margin-bottom: 75px;
   padding-left: 40px;
+  color: black;
 
   .row {
     display: flex;
