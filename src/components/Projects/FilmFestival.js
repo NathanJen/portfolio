@@ -30,10 +30,10 @@ export default function FilmFestival () {
               <a href="#overview" className={inView ? styles.active : null}>Overview</a>
             </li>
             <li>
-              <a href="#goals" className={inView2 && !inView ? styles.active : null}>Goals</a>
+              <a href="#goals" className={inView2 ? styles.active : null}>Goals</a>
             </li>
             <li>
-              <a href="#implementation" className={inView3 && !inView && !inView2 ? styles.active : null}>Implementation</a>
+              <a href="#implementation" className={inView3 ? styles.active : null}>Implementation</a>
             </li>
           </ol>
         </nav>
