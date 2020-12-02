@@ -61,7 +61,6 @@ function ProjectsCard ({ name, description, category, dates, image, link }) {
           <p className={styles.projectLink}>See More</p>
         </div>
         <div className={styles.projectImageContainer}>
-          <img src={image} alt="Project Hero" />
         </div>
       </div>
     </NavLink>

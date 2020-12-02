@@ -16,6 +16,11 @@ p {
   font-weight: normal;
   font-size: 18px;
   line-height: 35px;
+
+  @media screen and (max-width: 770px) {
+    font-size: 14px;
+    line-height: 25px;
+  }
 }
 
 .contentContainer {

@@ -52,8 +52,7 @@
   a {
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
-    line-height: 50px;
+    font-size: 14px;
     color: #C51231;
   }
 }
@@ -115,6 +114,13 @@
   margin-bottom: 75px;
   padding-left: 40px;
   color: black;
+  flex-wrap: wrap-reverse;
+  height: 400px;
+
+  @media screen and (max-width: 770px) {
+    padding-left: 0;
+    height: auto;
+  }
 
   .row {
     display: flex;
@@ -124,8 +130,11 @@
 
   .name {
     font-weight: bold;
-    font-size: 48px;
-    line-height: 71px;
+    font-size: 36px;
+
+    @media screen and (max-width: 770px) {
+      font-size: 28px;
+    }
   }
 
   .category {
@@ -133,6 +142,10 @@
     font-size: 18px;
     line-height: 27px;
     color: #1D90FF;
+
+    @media screen and (max-width: 770px) {
+      font-size: 14px;
+    }
   }
 
   .dates {
@@ -140,33 +153,54 @@
     font-size: 18px;
     line-height: 27px;
     color: #C4C4C4;
+
+    @media screen and (max-width: 770px) {
+      font-size: 14px;
+    }
   }
 
   .description {
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 14px;
+    line-height: 25px;
     margin-top: 20px;
   }
 
   .projectInfo {
     width: 45%;
+
+    @media screen and (max-width: 1240px) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: 770px) {
+      width: 100%;
+      padding: 25px;
+    }
+
+    .projectLink {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 21px;
+      text-decoration: underline;
+      margin-top: 30px;
+    }
   }
 
   .projectImageContainer {
     width: 50%;
+    height: 100%;
+    border-radius: 20px;
+    background-image: url('../../assets/HomePage/square-test.png');
+    background-position: center;
 
-    img {
-      width: 100%;
-      height: 100%;
-      border-radius: 20px;
+    @media screen and (max-width: 1240px) {
+      width: 45%;
     }
-  }
 
-  .projectLink {
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 21px;
-    text-decoration: underline;
-    margin-top: 30px;
+    @media screen and (max-width: 770px) {
+      width: 100%;
+      height: 300px;
+      background-image: url('../../assets/HomePage/baseball.png');
+    }
   }
 }
