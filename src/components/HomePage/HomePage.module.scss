@@ -10,10 +10,30 @@
   align-items: center;
   justify-content: center;
   margin-top: 75px;
+  flex-wrap: wrap-reverse;
+
+  @media screen and (max-width: 865px) {
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-top: 50px;
+  }
 }
 
 .introText {
-  width: 560px;
+  width: 45%;
+  max-width: 600px;
+
+  @media screen and (max-width: 865px) {
+    width: 60%;
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-top: 40px;
+    width: 90%;
+    margin-left: 5%;
+  }
 
   h1 {
     font-style: normal;
@@ -22,6 +42,11 @@
     line-height: 71px;
     color: #1D90FF;
     margin-bottom: 30px;
+
+    @media screen and (max-width: 650px) {
+      text-align: center;
+      margin-bottom: 15px;
+    }
   }
 
   a {
@@ -34,9 +59,19 @@
 }
 
 .headshotContainer {
-  height: 250px;
-  width: 250px;
+  width: 25%;
+  max-width: 275px;
   margin-left: 100px;
+
+  @media screen and (max-width: 865px) {
+    width: 30%;
+    margin-left: 50px;
+  }
+
+  @media screen and (max-width: 650px) {
+    width: 40%;
+    margin-left: 30%;
+  }
   
   img {
     width: 100%;
@@ -59,6 +94,14 @@
 
   a:hover {
     text-decoration: none;
+  }
+
+  @media screen and (max-width: 865px) {
+    margin-top: 100px;
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-top: 75px;
   }
 }
 
