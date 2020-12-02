@@ -11,9 +11,6 @@ import FabTimeline from './FabricationTimeline'
 function Intro () {
   return (
     <div className={styles.row}>
-      <div className={styles.introImgContainer}>
-        <img src={Plant} alt="Plant growing" />
-      </div>
       <div className={styles.introTxtContainer}>
         <p>
           While I want to use this portfolio to showcase the work that I am the most proud of, I also 
