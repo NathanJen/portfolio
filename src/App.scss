@@ -1,1 +1,30 @@
 @import "~bootstrap/scss/bootstrap";
+
+.dark {
+  background-color: #121212;
+  color: #FFFFFF;
+
+  a {
+    color: #FFFFFF;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+}
+
+.false {
+  a {
+    color: black;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.projectsCarddark {
+  background-color: #1E1E1E;
+}

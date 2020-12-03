@@ -11,6 +11,7 @@ const Title = styled.h1`
   font-size: 18px;
   line-height: 27px;
   margin-bottom: 20px;
+  font-family: 'Open Sans';
 `
 
 export default function TextBlock (props) {

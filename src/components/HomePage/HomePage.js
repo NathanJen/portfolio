@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './HomePage.module.scss'
 import { NavLink } from "react-router-dom"
 import Headshot from '../../assets/HomePage/headshot.png'
 import Baseball from '../../assets/HomePage/baseball.png'
 import FilmFestival from '../../assets/HomePage/filmfestival.png'
+import ThemeContext from "../../contexts/theme"
 
 function Intro () {
   return (
@@ -32,7 +33,6 @@ function Projects () {
         description="Designing a mobile-responsibe website that woud help Little Leagues increase communication during emergencies."
         category="UX/UI Design"
         dates="Oct - Dec 2018"
-        image={Baseball}
         link='/work/little-league'
       />
       <ProjectsCard 
@@ -40,17 +40,18 @@ function Projects () {
         description="Implementing the 2020 website for the Carnegie Mellon International Film Festival using HTML, CSS, and Javascript."
         category="UI Engineering"
         dates="Jan 2019 - Present"
-        image={FilmFestival}
         link='/work/cmu-iff'
       />
     </div>
   )
 }
 
-function ProjectsCard ({ name, description, category, dates, image, link }) {
+function ProjectsCard ({ name, description, category, dates, link }) {
+  const { theme } = useContext(ThemeContext)
+
   return (
     <NavLink to={link}>
-      <div className={styles.projectsCard}>
+      <div className={`${styles.projectsCard} projectsCard${theme}`}>
         <div className={styles.projectInfo}>
           <div className={styles.row}>
             <p className={styles.category}>{category}</p>

@@ -1,35 +1,40 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './Footer.module.scss'
 import LinkedIn from '../../assets/Footer/linkedin.png'
-import Instagram from '../../assets/Footer/instagram.png'
 import Letterboxd from '../../assets/Footer/film.png'
 import Medium from '../../assets/Footer/medium.png'
+import LinkedInDark from '../../assets/Footer/linkedinDark.svg'
+import LetterboxdDark from '../../assets/Footer/clapperboard.svg'
+import MediumDark from '../../assets/Footer/medium.svg'
+import ThemeContext from "../../contexts/theme"
+
 
 const footerIcons = [
   {
     icon: LinkedIn,
-    link: 'https://www.linkedin.com/'
-  }, 
-  {
-    icon: Instagram,
+    darkIcon: LinkedInDark,
     link: 'https://www.linkedin.com/'
   }, 
   {
     icon: Letterboxd,
-    link: 'https://www.linkedin.com/'
+    darkIcon: LetterboxdDark,
+    link: 'https://letterboxd.com/nathanjen/'
   }, 
   {
     icon: Medium,
-    link: 'https://www.linkedin.com/'
+    darkIcon: MediumDark,
+    link: 'https://www.medium.com/'
   }
 ]
 
 const IconRow = () => {
+  const { theme } = useContext(ThemeContext)
+
   return (
     <div className={styles.iconRow}>
       {footerIcons.map((icon, index) =>
         <a href={icon.link} rel="noreferrer" target="_blank" className={styles.iconContainer} key={index}>
-          <img src={icon.icon} alt='Footer' />
+          <img src={theme === "dark" ? icon.darkIcon : icon.icon} alt='Footer' />
         </a>  
       )}
     </div>

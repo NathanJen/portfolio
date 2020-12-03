@@ -1,3 +1,4 @@
+import React, { useState } from "react"
 import './App.scss';
 import { Switch, Route } from 'react-router-dom'
 import Header from './components/Header/Header'
@@ -7,19 +8,25 @@ import About from './components/About/About'
 import Journey from './components/Journey/Journey'
 import FilmFestival from './components/Projects/FilmFestival'
 import LittleLeague from './components/Projects/LittleLeague'
+import ThemeContext from './contexts/theme'
 
 function App() {
+  const [theme, toggleTheme] = useState("light")
+  const value = { theme, toggleTheme }
+
   return (
-    <div className="App">
-      <Header />
-      <Switch>
-        <Route exact path='/about' component={About} />
-        <Route exact path='/journey' component={Journey} />
-        <Route exact path='/work/cmu-iff' component={FilmFestival} />
-        <Route exact path='/work/little-league' component={LittleLeague} />
-        <Route exact path='/' component={HomePage} />
-      </Switch>
-      <Footer />
+    <div className={`app ${theme === 'dark' && 'dark'}`}>
+      <ThemeContext.Provider value={value}>
+        <Header />
+        <Switch>
+          <Route exact path='/about' component={About} />
+          <Route exact path='/journey' component={Journey} />
+          <Route exact path='/work/cmu-iff' component={FilmFestival} />
+          <Route exact path='/work/little-league' component={LittleLeague} />
+          <Route exact path='/' component={HomePage} />
+        </Switch>
+        <Footer />
+      </ThemeContext.Provider>
     </div>
   );
 }
