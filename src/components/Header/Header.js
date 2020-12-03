@@ -1,34 +1,31 @@
-import React, { useContext } from "react"
+import React, { useState } from "react"
 import styles from './Header.module.scss'
-import Resume from '../../assets/Header/Jen_Nathan_Resume.pdf'
 import { NavLink } from "react-router-dom"
-import ThemeContext from "../../contexts/theme"
-import Lightsaber from '../../assets/Header/lightsaber.png'
-import DarkLightsaber from '../../assets/Header/dark-lightsaber.png'
+import { Squash as Hamburger } from "hamburger-react"
+import styled from "styled-components"
+import Nav from './Nav'
+import MobileHeader from './MobileHeader'
 
-const Nav = () => {
-  return (
-    <nav>
-      <ul>
-        <li><NavLink to='/journey'>My Journey</NavLink></li>
-        <li><a href={Resume} rel="noreferrer" target="_blank">Resume</a></li>
-        <li><NavLink to='/about'>About</NavLink></li>
-      </ul>
-    </nav>
-  )
-}
+// responsive inspiration from https://github.com/trujic1000/react-navbar/
+
+const HeaderContainer = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+`
 
 export default function Header () {
-  const { theme, toggleTheme } = useContext(ThemeContext)
+  const [menuOpen, setMenu] = useState(false);
+  const toggleMenu = () => setMenu(() => !menuOpen);
 
   return (
-    <header className={styles.header}>
-      <h1 className={styles.logo}><NavLink to='/'>Nathan Jen</NavLink></h1>
-      <Nav />
-      <div className={styles.lightsaberContainer} onClick={() => toggleTheme(theme === "dark" ? "light" : "dark")}>
-        <img src={theme === "dark" ? Lightsaber : DarkLightsaber} alt='Lightsaber' />
-      </div>
-    </header>
+    <HeaderContainer>
+      <header>
+        <h1 className={styles.logo}><NavLink to='/'>Nathan Jen</NavLink></h1>
+        <Nav />
+        <Hamburger className={styles.hamburger} toggled={menuOpen} toggle={toggleMenu} duration={.3} />
+      </header>
+      <MobileHeader menuOpen={menuOpen} />
+    </HeaderContainer>
   )
 }
 

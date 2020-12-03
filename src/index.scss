@@ -27,3 +27,13 @@ p {
 .contentContainer {
   margin: 0 5% 0 5%;
 }
+
+.hamburger-react {
+  display: none;
+  z-index: 99;
+  margin-right: 5%;
+
+  @media screen and (max-width: 800px) {
+    display: block;
+  }
+}

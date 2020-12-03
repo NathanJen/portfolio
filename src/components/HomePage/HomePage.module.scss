@@ -39,9 +39,12 @@
     font-style: normal;
     font-weight: bold;
     font-size: 48px;
-    line-height: 71px;
     color: #1D90FF;
     margin-bottom: 30px;
+
+    @media screen and (max-width: 865px) {
+      font-size: 36px;
+    }
 
     @media screen and (max-width: 650px) {
       text-align: center;
