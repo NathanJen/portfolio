@@ -1,9 +1,13 @@
-import React from "react"
+import React, { useEffect } from "react"
 import styled from "styled-components"
 import Nav from './Nav'
 
 const MobileNavbar = ({ menuOpen }) => {
-  console.log(menuOpen)
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden'
+    }
+  }, [menuOpen]);
 
   return (
     <React.Fragment>

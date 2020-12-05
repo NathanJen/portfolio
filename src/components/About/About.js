@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './About.module.scss'
 import Pokemon from '../../assets/About/pokemon.jpeg'
 import Resume from '../../assets/Header/Jen_Nathan_Resume.pdf'
+import ThemeContext from "../../contexts/theme"
 
 function Intro () {
   return (
@@ -30,8 +31,10 @@ function Intro () {
 }
 
 function Contact () {
+  const { theme } = useContext(ThemeContext)
+
   return (
-    <div className={styles.contactContainer}>
+    <div className={`${styles.contactContainer} ${theme}Card`}>
       <h6>Lets Talk! ☎</h6>
       <p>
         I’m always looking to meet new people so I can become a better designer by continuing to learn 

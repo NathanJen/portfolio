@@ -6,7 +6,7 @@ import ThemeContext from "../../contexts/theme"
 import Lightsaber from '../../assets/Header/lightsaber.png'
 import DarkLightsaber from '../../assets/Header/dark-lightsaber.png'
 
-export default function Nav () {
+export default function Nav (props) {
   const { theme, toggleTheme } = useContext(ThemeContext)
 
   return (
