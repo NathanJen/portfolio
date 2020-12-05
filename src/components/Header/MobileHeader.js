@@ -7,6 +7,9 @@ const MobileNavbar = ({ menuOpen, toggleMenu }) => {
     if (menuOpen) {
       document.body.style.overflow = 'hidden'
     }
+    else {
+      document.body.style.overflow = 'unset'
+    }
   }, [menuOpen]);
 
   return (
