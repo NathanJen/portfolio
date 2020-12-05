@@ -2,7 +2,7 @@ import React, { useEffect } from "react"
 import styled from "styled-components"
 import Nav from './Nav'
 
-const MobileNavbar = ({ menuOpen }) => {
+const MobileNavbar = ({ menuOpen, toggleMenu }) => {
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = 'hidden'
@@ -13,7 +13,7 @@ const MobileNavbar = ({ menuOpen }) => {
     <React.Fragment>
       {menuOpen && (
         <MobileNav>
-          <Nav />
+          <Nav toggleMenu={toggleMenu} />
         </MobileNav>
       )}
     </React.Fragment>

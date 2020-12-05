@@ -6,16 +6,16 @@ import ThemeContext from "../../contexts/theme"
 import Lightsaber from '../../assets/Header/lightsaber.png'
 import DarkLightsaber from '../../assets/Header/dark-lightsaber.png'
 
-export default function Nav (props) {
+export default function Nav ({ toggleMenu }) {
   const { theme, toggleTheme } = useContext(ThemeContext)
 
   return (
     <React.Fragment>
       <nav>
         <ul>
-          <li><NavLink to='/journey'>My Journey</NavLink></li>
-          <li><a href={Resume} rel="noreferrer" target="_blank">Resume</a></li>
-          <li><NavLink to='/about'>About</NavLink></li>
+          <li><NavLink to='/journey' onClick={() => toggleMenu()}>My Journey</NavLink></li>
+          <li><a href={Resume} rel="noreferrer" target="_blank" onClick={() => toggleMenu()}>Resume</a></li>
+          <li><NavLink to='/about' onClick={() => toggleMenu()}>About</NavLink></li>
         </ul>
       </nav>
       <div className={styles.lightsaberContainer} onClick={() => toggleTheme(theme === "dark" ? "light" : "dark")}>

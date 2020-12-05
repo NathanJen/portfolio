@@ -22,7 +22,7 @@ export default function Header () {
     <HeaderContainer>
       <header>
         <h1 className={styles.logo}><NavLink to='/'>Nathan Jen</NavLink></h1>
-        <Nav />
+        <Nav toggleMenu={toggleMenu} /> 
         <Hamburger 
           className={styles.hamburger} 
           toggled={menuOpen} 
@@ -31,7 +31,10 @@ export default function Header () {
           color={theme === 'dark' ? "#FFFFFF" : "#000000"}
         />
       </header>
-      <MobileHeader menuOpen={menuOpen} />
+      <MobileHeader 
+        menuOpen={menuOpen}
+        toggleMenu={toggleMenu}
+      />
     </HeaderContainer>
   )
 }
