@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import styles from './Journey.module.scss'
-import Plant from '../../assets/Journey/growing.png'
 import Design from '../../assets/Journey/paint-palette.png'
 import Dev from '../../assets/Journey/coding.png'
 import Fabrication from '../../assets/Journey/3d-printer.png'
 import DesignTimeline from './DesignTimeline'
 import DevTimeline from './DevTimeline'
 import FabTimeline from './FabricationTimeline'
+import ThemeContext from "../../contexts/theme"
 
 function Intro () {
   return (
@@ -26,8 +26,10 @@ function Intro () {
 }
 
 function CategoryCard ({ img, alt, name, onclick }) {
+  const { theme } = useContext(ThemeContext)
+
   return (
-    <div className={styles.categoryCard} onClick={() => onclick(name)}>
+    <div className={`${styles.categoryCard} ${theme}Card`} onClick={() => onclick(name)}>
       <img src={img} alt={alt} />
       <h2>{name}</h2>
     </div>

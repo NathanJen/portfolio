@@ -36,4 +36,5 @@ const MobileNav = styled.div`
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(40px);
+  z-index: 99;
 `
