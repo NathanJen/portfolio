@@ -16,7 +16,7 @@ const MobileNavbar = ({ menuOpen, toggleMenu }) => {
     <React.Fragment>
       {menuOpen && (
         <MobileNav>
-          <Nav toggleMenu={toggleMenu} />
+          <Nav menuOpen={menuOpen} toggleMenu={toggleMenu} />
         </MobileNav>
       )}
     </React.Fragment>

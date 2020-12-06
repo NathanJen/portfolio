@@ -22,7 +22,7 @@ export default function Header () {
     <HeaderContainer>
       <header>
         <h1 className={styles.logo}><NavLink to='/'>Nathan Jen</NavLink></h1>
-        <Nav toggleMenu={toggleMenu} /> 
+        <Nav menuOpen={menuOpen} toggleMenu={toggleMenu} /> 
         <Hamburger 
           className={styles.hamburger} 
           toggled={menuOpen} 
