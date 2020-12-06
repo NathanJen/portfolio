@@ -14,9 +14,11 @@ function Intro () {
       <div className={styles.introTxtContainer}>
         <p>
           While I want to use this portfolio to showcase the work that I am the most proud of, I also 
-          want it to be a place that shows my progress as a designer, developer, and fabricator. 
+          want it to be a place that shows my progress as a designer, developer, and researcher. 
         </p>
         <p>
+          After clicking on a category
+          
           In this page, I want to showcase previous work that is imperfect so that I can reflect and learn more 
           from my past experiences.
         </p>
@@ -34,6 +36,17 @@ function CategoryCard ({ img, alt, name, onclick }) {
       <h2>{name}</h2>
     </div>
   )
+}
+
+function CategoryBtn ({ name, onclick }) {
+  const { theme } = useContext(ThemeContext)
+
+  return (
+    <button className={`${styles.categoryBtn}`} onClick={() => onclick(name)}>
+      {name}
+    </button>
+  )
+  
 }
 
 export default function Journey () {

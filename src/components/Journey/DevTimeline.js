@@ -63,6 +63,20 @@ export default function DevTimeline () {
             Creative Direction, User Experience, Visual Design, Project Management, Team Leading
           </p>
         </VerticalTimelineElement>
+        <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+          contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+          date="Fall 2020"
+          dateClassName={styles.date}
+          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+        >
+          <h3 className="vertical-timeline-element-title">RemoteHQ</h3>
+          <h4 className="vertical-timeline-element-subtitle">Ecommerce Website</h4>
+          <p>
+            Creative Direction, User Experience, Visual Design, Project Management, Team Leading
+          </p>
+        </VerticalTimelineElement>
       </VerticalTimeline>
     </div>
   )

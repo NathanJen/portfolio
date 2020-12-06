@@ -8,6 +8,7 @@ import About from './components/About/About'
 import Journey from './components/Journey/Journey'
 import FilmFestival from './components/Projects/FilmFestival'
 import LittleLeague from './components/Projects/LittleLeague'
+import MuddyPaws from './components/Projects/MuddyPaws'
 import ThemeContext from './contexts/theme'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route exact path='/journey' component={Journey} />
           <Route exact path='/work/cmu-iff' component={FilmFestival} />
           <Route exact path='/work/little-league' component={LittleLeague} />
+          <Route exact path='/work/muddy-paws' component={MuddyPaws} />
           <Route exact path='/' component={HomePage} />
         </Switch>
         <Footer />
