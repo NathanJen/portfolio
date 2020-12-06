@@ -30,8 +30,8 @@ const Fade = styled.div`
   will-change: opacity, visibility;
 
   ${({ visible }) => visible && `
-  opacity: 1;
-  transform: none;
-  visibility: visible;
+    opacity: 1;
+    transform: none;
+    visibility: visible;
   `}
 `

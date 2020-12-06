@@ -45,3 +45,15 @@ p {
 .darkCard {
   background-color: #1E1E1E;
 }
+
+.darkList {
+  a:after {
+    background: white;
+  }
+}
+
+.lightList {
+  a:after {
+    background: black;
+  }
+}

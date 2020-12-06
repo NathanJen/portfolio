@@ -39,6 +39,29 @@ ul {
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
+
+    a {
+      position: relative;
+      transition: all .5s;
+    }
+    a:before {
+      transition: all .5s;
+    }
+    a:after {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 0%;
+      content: '.';
+      color: transparent;
+      height: 2px;
+      transition: all .5s;
+    }
+    a:hover:after {
+      width: 100%;
+    }
   }
 
   @media screen and (max-width: 800px) {
