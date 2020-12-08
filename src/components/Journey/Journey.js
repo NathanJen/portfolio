@@ -14,7 +14,8 @@ function Intro () {
       <div className={styles.introTxtContainer}>
         <p>
           While I want to use this portfolio to showcase the work that I am the most proud of, I also 
-          want it to be a place that shows my progress as a designer, developer, and researcher. 
+          want it to be a place that shows my progress as a designer, developer, and Fabricator. Please
+          click on a card below to see a timeline of all my work! 
         </p>
         <p>
           After clicking on a category
@@ -27,11 +28,12 @@ function Intro () {
   )
 }
 
-function CategoryCard ({ img, alt, name, onclick }) {
+function CategoryCard ({ category, img, alt, name, onclick }) {
   const { theme } = useContext(ThemeContext)
+  const active = (category === name)
 
   return (
-    <div className={`${styles.categoryCard} ${theme}Card`} onClick={() => onclick(name)}>
+    <div className={`${styles.categoryCard} ${theme}Card ${active && styles.active}`} onClick={() => onclick(name)}>
       <img src={img} alt={alt} />
       <h2>{name}</h2>
     </div>
@@ -46,9 +48,9 @@ export default function Journey () {
       <h1 className={styles.title}>My Journey</h1>
       <Intro />
       <div className={styles.categoryRow}>
-        <CategoryCard img={Design} alt="Paintbrush and paint palette" name="Design" onclick={setCategory} />
-        <CategoryCard img={Dev} alt="Coding text editor" name="Development" onclick={setCategory} />
-        <CategoryCard img={Fabrication} alt="3D printer" name="Fabrication" onclick={setCategory} />
+        <CategoryCard category={category} img={Design} alt="Paintbrush and paint palette" name="Design" onclick={setCategory} />
+        <CategoryCard category={category}img={Dev} alt="Coding text editor" name="Development" onclick={setCategory} />
+        <CategoryCard category={category} img={Fabrication} alt="3D printer" name="Fabrication" onclick={setCategory} />
       </div>
       {category === 'Design' && <DesignTimeline />}
       {category === 'Development' && <DevTimeline />}
