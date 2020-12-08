@@ -3,7 +3,7 @@ import styles from './Header.module.scss'
 import Resume from '../../assets/Header/Jen_Nathan_Resume.pdf'
 import { NavLink } from "react-router-dom"
 import ThemeContext from "../../contexts/theme"
-import Lightsaber from '../../assets/Header/lightsaber.png'
+import Lightsaber from '../../assets/Header/lightsaber.svg'
 import DarkLightsaber from '../../assets/Header/dark-lightsaber.png'
 
 export default function Nav ({ menuOpen, toggleMenu }) {

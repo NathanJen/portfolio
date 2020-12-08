@@ -38,19 +38,8 @@ function CategoryCard ({ img, alt, name, onclick }) {
   )
 }
 
-function CategoryBtn ({ name, onclick }) {
-  const { theme } = useContext(ThemeContext)
-
-  return (
-    <button className={`${styles.categoryBtn}`} onClick={() => onclick(name)}>
-      {name}
-    </button>
-  )
-  
-}
-
 export default function Journey () {
-  const [category, setCategory] = useState('Design');
+  const [category, setCategory] = useState('');
 
   return (
     <div className='contentContainer'>

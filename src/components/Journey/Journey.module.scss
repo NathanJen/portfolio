@@ -34,10 +34,7 @@
   justify-content: space-between;
   margin-top: 100px;
   margin-bottom: 150px;
-}
-
-.categoryBtn {
-  
+  flex-wrap: wrap;
 }
 
 .categoryCard {
@@ -52,10 +49,28 @@
     padding: 20px;
   }
 
+  @media screen and (max-width: 770px) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+
   img {
     width: 50%;
     margin-left: 25%;
     margin-bottom: 40px;
+
+    @media screen and (max-width: 770px) {
+      height: 50px;
+      width: auto;
+      margin-left: 0;
+      margin-bottom: 0;
+      margin-right: 50px;
+    }
+  
   }
 
   h2 {
