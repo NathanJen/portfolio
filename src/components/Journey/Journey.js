@@ -14,8 +14,8 @@ function Intro () {
       <div className={styles.introTxtContainer}>
         <p>
           While I want to use this portfolio to showcase the work that I am the most proud of, I also 
-          want it to be a place that shows my progress as a designer, developer, and Fabricator. Please
-          click on a card below to see a timeline of all my work! 
+          want it to be a place that shows my progress as a designer, developer, and Fabricator. 
+          <b> Please click on a card below to see a timeline of all my work!</b> 
         </p>
         <p>
           After clicking on a category

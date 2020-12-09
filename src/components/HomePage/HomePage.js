@@ -16,6 +16,9 @@ function Intro () {
           currently a Master of HCI student at&nbsp;
           <a href='https://www.hcii.cmu.edu/' className={styles.cmu} rel="noreferrer" target="_blank">Carnegie Mellon</a>.
         </p>
+        <p>
+          * Fall 2020 pieces coming soon! (I hope)
+        </p>
       </div>
       <div className={styles.headshotContainer}>
         <img src={Headshot} alt='Headshot' />

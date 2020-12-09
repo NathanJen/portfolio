@@ -1,49 +1,32 @@
 import React from 'react'
 import styles from './Journey.module.scss'
-import 'react-vertical-timeline-component/style.min.css';
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css'
+import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component'
+import { NavLink } from 'react-router-dom'
 
 export default function DesignTimeline ({ theme }) {
   return (
     <div className={styles.timeline}>
       <VerticalTimeline className={`${theme}Line`}>
-        <VerticalTimelineElement
+        {/* <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-          date="Fall 2018"
+          date="Summer 2020"
           dateClassName={theme}
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
         >
-          <h3 className="vertical-timeline-element-title">Data Driven Display</h3>
+          <NavLink to='/work/little-league'>
+            <h3 className="vertical-timeline-element-title">ADC Housing Website Redesign</h3>
+          </NavLink>
           <h4 className="vertical-timeline-element-subtitle">UX/UI Design</h4>
-          <p>
-            Designing a large environmental display for transporation
-          </p>
-        </VerticalTimelineElement>
+          <p>Redesigning an apartment listing website</p>
+        </VerticalTimelineElement> */}
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-          date="Fall 2018"
-          dateClassName={theme}
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-        >
-          <h3 className="vertical-timeline-element-title">Little League</h3>
-          <h4 className="vertical-timeline-element-subtitle">UX/UI Design</h4>
-          <p>
-            Designing a responsive website for Little Leagues
-          </p>
-        </VerticalTimelineElement>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
           date="Fall 2019"
           dateClassName={theme}
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
         >
-          <h3 className="vertical-timeline-element-title">Box Fox</h3>
+          <NavLink to='/work/little-league'>
+            <h3 className="vertical-timeline-element-title">Box Fox</h3>
+          </NavLink>
           <h4 className="vertical-timeline-element-subtitle">Service Design</h4>
           <p>
             Designing a service to simplify the return process
@@ -51,18 +34,28 @@ export default function DesignTimeline ({ theme }) {
         </VerticalTimelineElement>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
-          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-          date="Summer 2020"
+          date="Fall 2018"
           dateClassName={theme}
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
         >
-          <h3 className="vertical-timeline-element-title">ADC Housing Website Redesign</h3>
+          <NavLink to='/work/little-league'>
+            <h3 className="vertical-timeline-element-title">Little League</h3>
+          </NavLink>
           <h4 className="vertical-timeline-element-subtitle">UX/UI Design</h4>
           <p>
-            Redesigning an apartment listing website
+            Designing a responsive website for Little Leagues
           </p>
         </VerticalTimelineElement>
+        {/* <VerticalTimelineElement
+          className="vertical-timeline-element--work"
+          date="Fall 2018"
+          dateClassName={theme}
+        >
+          <h3 className="vertical-timeline-element-title">Data Driven Display</h3>
+          <h4 className="vertical-timeline-element-subtitle">UX/UI Design</h4>
+          <p>
+            Designing a large environmental display for transporation
+          </p>
+        </VerticalTimelineElement> */}
       </VerticalTimeline>
     </div>
   )
