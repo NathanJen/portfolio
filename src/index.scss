@@ -57,3 +57,19 @@ p {
     background: black;
   }
 }
+
+.darkLine:before {
+  background: white !important;
+}
+
+.lightLine:before {
+  background: black !important;
+}
+
+.light {
+  color: black;
+}
+
+.dark {
+  color: white !important;
+}

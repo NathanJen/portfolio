@@ -3,16 +3,16 @@ import 'react-vertical-timeline-component/style.min.css';
 import styles from './Journey.module.scss'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 
-export default function FabricationTimeline () {
+export default function FabricationTimeline ({ theme }) {
   return (
     <div className={styles.timeline}>
-      <VerticalTimeline className={styles.designLine}>
+      <VerticalTimeline className={`${theme}Line`}>
         <VerticalTimelineElement
           className="vertical-timeline-element--work"
           contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
           date="2011 - present"
-          dateClassName={styles.date}
+          dateClassName={theme}
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
         >
           <h3 className="vertical-timeline-element-title">3D Printer Calibration</h3>
@@ -26,7 +26,7 @@ export default function FabricationTimeline () {
           contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
           contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
           date="2011 - present"
-          dateClassName={styles.date}
+          dateClassName={theme}
           iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
         >
           <h3 className="vertical-timeline-element-title">Fabrication Portfolio</h3>

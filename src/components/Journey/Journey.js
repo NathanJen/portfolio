@@ -42,6 +42,7 @@ function CategoryCard ({ category, img, alt, name, onclick }) {
 
 export default function Journey () {
   const [category, setCategory] = useState('');
+  const { theme } = useContext(ThemeContext)
 
   return (
     <div className='contentContainer'>
@@ -52,9 +53,9 @@ export default function Journey () {
         <CategoryCard category={category}img={Dev} alt="Coding text editor" name="Development" onclick={setCategory} />
         <CategoryCard category={category} img={Fabrication} alt="3D printer" name="Fabrication" onclick={setCategory} />
       </div>
-      {category === 'Design' && <DesignTimeline />}
-      {category === 'Development' && <DevTimeline />}
-      {category === 'Fabrication' && <FabTimeline />}
+      {category === 'Design' && <DesignTimeline theme={theme} />}
+      {category === 'Development' && <DevTimeline theme={theme} />}
+      {category === 'Fabrication' && <FabTimeline theme={theme} />}
     </div>
   )
 }
