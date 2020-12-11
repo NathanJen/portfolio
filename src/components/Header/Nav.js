@@ -3,7 +3,8 @@ import styles from './Header.module.scss'
 import Resume from '../../assets/Header/Jen_Nathan_Resume.pdf'
 import { NavLink } from "react-router-dom"
 import ThemeContext from "../../contexts/theme"
-import Lightsaber from '../../assets/Header/lightsaber.svg'
+import Lightsaber from './Lightsaber'
+import LightLightsaber from '../../assets/Header/lightsaber.svg'
 import DarkLightsaber from '../../assets/Header/dark-lightsaber.svg'
 
 export default function Nav ({ menuOpen, toggleMenu }) {
@@ -19,7 +20,7 @@ export default function Nav ({ menuOpen, toggleMenu }) {
         </ul>
       </nav>
       <div className={styles.lightsaberContainer} onClick={() => toggleTheme(theme === "dark" ? "light" : "dark")}>
-        <img src={theme === "dark" ? Lightsaber : DarkLightsaber} alt='Lightsaber' />
+        <Lightsaber theme={theme} />
       </div>
     </React.Fragment>
   )
