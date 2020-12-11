@@ -22,6 +22,7 @@ export default function FabricationTimeline ({ theme }) {
           </p>
         </VerticalTimelineElement> */}
         <VerticalTimelineElement
+          contentStyle={theme === 'dark' ? { background: '#1E1E1E' } : { background: 'white' }}
           className="vertical-timeline-element--work"
           date="Spring 2020"
           dateClassName={theme}
@@ -33,6 +34,7 @@ export default function FabricationTimeline ({ theme }) {
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
+          contentStyle={theme === 'dark' ? { background: '#1E1E1E' } : { background: 'white' }}
           className="vertical-timeline-element--work"
           date="Spring 2020"
           dateClassName={theme}

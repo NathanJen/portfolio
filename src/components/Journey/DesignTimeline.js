@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styles from './Journey.module.scss'
 import 'react-vertical-timeline-component/style.min.css'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component'
@@ -20,6 +20,7 @@ export default function DesignTimeline ({ theme }) {
           <p>Redesigning an apartment listing website</p>
         </VerticalTimelineElement> */}
         <VerticalTimelineElement
+          contentStyle={theme === 'dark' ? { background: '#1E1E1E' } : { background: 'white' }}
           className="vertical-timeline-element--work"
           date="Fall 2019"
           dateClassName={theme}
@@ -33,6 +34,7 @@ export default function DesignTimeline ({ theme }) {
           </p>
         </VerticalTimelineElement>
         <VerticalTimelineElement
+          contentStyle={theme === 'dark' ? { background: '#1E1E1E' } : { background: 'white' }}
           className="vertical-timeline-element--work"
           date="Fall 2018"
           dateClassName={theme}

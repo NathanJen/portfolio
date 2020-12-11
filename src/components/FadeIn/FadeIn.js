@@ -16,7 +16,7 @@ export default function FadeIn(props) {
     })
     observer.observe(domRef.current)
   }, []);
-  
+
   return (
     <Fade visible={isVisible || hasViewed} ref={domRef}>
       {props.children}
@@ -26,7 +26,7 @@ export default function FadeIn(props) {
 
 const Fade = styled.div`
   opacity: 0;
-  // transform: translateY(10vh);
+  transform: translateY(20vh);
   visibility: hidden;
   transition: opacity 0.6s ease-out, transform 1.2s ease-out;
   will-change: opacity, visibility;
