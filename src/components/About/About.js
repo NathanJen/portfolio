@@ -34,7 +34,7 @@ function Contact () {
   const { theme } = useContext(ThemeContext)
 
   return (
-    <div className={`${styles.contactContainer} ${theme}Card`}>
+    <div className={`${styles.contactContainer} ${theme}ContactCard`}>
       <h6>Lets Talk! ☎</h6>
       <p>
         I’m always looking to meet new people so I can become a better designer by continuing to learn 
