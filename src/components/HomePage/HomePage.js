@@ -2,8 +2,8 @@ import React, { useContext } from 'react'
 import styles from './HomePage.module.scss'
 import { NavLink } from "react-router-dom"
 import Headshot from '../../assets/HomePage/headshot.png'
-import Baseball from '../../assets/HomePage/baseball.png'
-import FilmFestival from '../../assets/HomePage/filmfestival.png'
+// import Baseball from '../../assets/HomePage/baseball.png'
+// import FilmFestival from '../../assets/HomePage/filmfestival.png'
 import ThemeContext from "../../contexts/theme"
 
 function Intro () {

@@ -4,8 +4,6 @@ import Resume from '../../assets/Header/Jen_Nathan_Resume.pdf'
 import { NavLink } from "react-router-dom"
 import ThemeContext from "../../contexts/theme"
 import Lightsaber from './Lightsaber'
-import LightLightsaber from '../../assets/Header/lightsaber.svg'
-import DarkLightsaber from '../../assets/Header/dark-lightsaber.svg'
 
 export default function Nav ({ menuOpen, toggleMenu }) {
   const { theme, toggleTheme } = useContext(ThemeContext)
@@ -14,7 +12,7 @@ export default function Nav ({ menuOpen, toggleMenu }) {
     <React.Fragment>
       <nav>
         <ul className={`${theme}List`}>
-          <li><NavLink to='/journey' onClick={() => menuOpen === true && toggleMenu()}>My Journey</NavLink></li>
+          <li><NavLink to='/journey' onClick={() => menuOpen === true && toggleMenu()}>Work</NavLink></li>
           <li><a href={Resume} rel="noreferrer" target="_blank" onClick={() => menuOpen === true && toggleMenu()}>Resume</a></li>
           <li><NavLink to='/about' onClick={() => menuOpen === true && toggleMenu()}>About</NavLink></li>
         </ul>

@@ -46,7 +46,7 @@ export default function Journey () {
 
   return (
     <div className='contentContainer'>
-      <h1 className={styles.title}>My Journey</h1>
+      <h1 className={styles.title}>Behold! My Work</h1>
       <Intro />
       <div className={styles.categoryRow}>
         <CategoryCard category={category} img={Design} alt="Paintbrush and paint palette" name="Design" onclick={setCategory} />
