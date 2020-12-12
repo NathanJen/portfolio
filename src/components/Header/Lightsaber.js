@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Lightsaber.module.scss'
 
+// icon from https://www.flaticon.com/free-icon/lightsaber_1281055?term=lightsaber&page=1&position=3&related_item_id=1281055
 export default function Lightsaber ({ theme }) {
   return (
     <div className={styles.lightsaber}>
