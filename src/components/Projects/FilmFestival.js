@@ -1,20 +1,15 @@
 import React from 'react'
 import styles from './Projects.module.scss'
 import ProjectIntro from './ProjectIntro'
-import { useInView } from 'react-intersection-observer'
 import TextBlock from './TextBlock'
 import ImageTextBlock from './ImageTextBlock'
 import Test from '../../assets/Projects/cmu-iff/test.png'
 import OldWebsite from '../../assets/Projects/cmu-iff/cmuiff-old.png'
 import OldMobile from '../../assets/Projects/cmu-iff/cmuiff-old-mobile.png'
 import FadeIn from '../FadeIn/FadeIn'
+import { Link } from "react-scroll"
 
-// Code inspiration from https://www.bram.us/2020/01/10/smooth-scrolling-sticky-scrollspy-navigation/
 export default function FilmFestival () {
-  const [ref, inView] = useInView({ threshold: 0 })
-  const [ref2, inView2] = useInView({ threshold: 0 })
-  const [ref3, inView3] = useInView({ threshold: 0 })
-
   return (
     <div>
       <ProjectIntro
@@ -28,19 +23,49 @@ export default function FilmFestival () {
         <nav className={styles.sectionNav}>
           <ol>
             <li>
-              <a href="#overview" className={inView ? styles.active : null}>Overview</a>
+              <Link
+                activeClass={styles.active}
+                className={styles.navLink}
+                to="overview"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                Overview
+              </Link>
             </li>
             <li>
-              <a href="#goals" className={inView2 ? styles.active : null}>Goals</a>
+            <Link
+                activeClass={styles.active}
+                className={styles.navLink}
+                to="goals"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                Goals
+              </Link>
             </li>
             <li>
-              <a href="#implementation" className={inView3 ? styles.active : null}>Implementation</a>
+              <Link
+                activeClass={styles.active}
+                className={styles.navLink}
+                to="implementation"
+                spy={true}
+                smooth={true}
+                offset={-100}
+                duration={500}
+              >
+                Implementation
+              </Link>
             </li>
           </ol>
         </nav>
-        <div inView={inView}>
+        <div>
           <FadeIn>
-            <section id="overview" ref={ref} style={{paddingTop: "0px"}}>
+            <section id="overview">
               <h6>Overview</h6>
               <TextBlock title="Project Description">
                 <p>
@@ -59,7 +84,7 @@ export default function FilmFestival () {
             </section>
           </FadeIn>
           <FadeIn>
-            <section id="goals" ref={ref2}>
+            <section id="goals">
               <h6>Goals</h6>
               <ImageTextBlock
                 title="Improved Responsiveness + Intuitive Navigation"
@@ -79,7 +104,7 @@ export default function FilmFestival () {
             </section>
           </FadeIn>
           <FadeIn>
-            <section id="implementation" ref={ref3}>
+            <section id="implementation">
               <h6>Implementation</h6>
               <TextBlock title="Details">
                 <p>

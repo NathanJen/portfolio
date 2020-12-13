@@ -27,13 +27,20 @@ main {
   border-right: 2px solid #C4C4C4;
   margin-right: 8%;
 
-  a {
+  .navLink {
     text-decoration: none;
     display: block;
     padding: .125rem 0;
     color: #ccc;
     transition: all 100ms ease-in-out;
   }
+
+  .navLink:hover,
+  .navLink:focus {
+    color: #666;
+    cursor: pointer;
+  }
+
 
   ol {
     list-style: none;
@@ -54,14 +61,8 @@ main {
   }
 }
 
-.sectionNav a:hover,
-.sectionNav a:focus {
-  color: #666;
-}
-
 section {
-  padding-top: 12vh;
-  margin-bottom: 50px;
+  margin-bottom: 150px; 
 
   h6 {
     font-style: normal;
@@ -71,8 +72,8 @@ section {
     color: #1272ED;
   }
 
-  @media screen and (max-width: 700px) {
-    padding-top: 8vh;
+  @media screen and (max-width: 1000px) {
+    margin-bottom: 100px;
   }
 }
 
