@@ -1,9 +1,10 @@
 import React, { useContext } from 'react'
 import styles from './HomePage.module.scss'
+import styled from 'styled-components'
 import { NavLink } from "react-router-dom"
 import Headshot from '../../assets/HomePage/headshot.png'
-// import Baseball from '../../assets/HomePage/baseball.png'
-// import FilmFestival from '../../assets/HomePage/filmfestival.png'
+import Baseball from '../../assets/HomePage/baseball.png'
+import FilmFestival from '../../assets/HomePage/film-festival.png'
 import ThemeContext from "../../contexts/theme"
 
 function Intro () {
@@ -37,6 +38,7 @@ function Projects () {
         category="UX/UI Design"
         dates="Oct - Dec 2018"
         link='/work/little-league'
+        image={Baseball}
       />
       <ProjectsCard 
         name="CMU-IFF 2020 Festival Website"
@@ -44,12 +46,13 @@ function Projects () {
         category="UI Engineering"
         dates="Jan 2019 - Present"
         link='/work/cmu-iff'
+        image={FilmFestival}
       />
     </div>
   )
 }
 
-function ProjectsCard ({ name, description, category, dates, link }) {
+function ProjectsCard ({ name, description, category, dates, link, image, squareImg }) {
   const { theme } = useContext(ThemeContext)
 
   return (
@@ -64,8 +67,7 @@ function ProjectsCard ({ name, description, category, dates, link }) {
           <p className={styles.description}>{description}</p>
           <p className={styles.projectLink}>See More</p>
         </div>
-        <div className={styles.projectImageContainer}>
-        </div>
+        <ProjectImgContainer image={image} squareImg={squareImg}></ProjectImgContainer>
       </div>
     </NavLink>
   )
@@ -79,3 +81,21 @@ export default function HomePage () {
     </div>
   )
 }
+
+const ProjectImgContainer = styled.div`
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  background-image: url(${props => props.image});
+  background-size: cover;
+  background-position: center;
+
+  @media screen and (max-width: 1240px) {
+    width: 45%;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 100%;
+    height: 300px;
+  }
+`

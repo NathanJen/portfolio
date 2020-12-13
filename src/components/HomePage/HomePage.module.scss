@@ -60,7 +60,7 @@
     border-bottom: 1px solid transparent;
     transition: border-bottom 0.5s;
 
-    @media screen and (max-width: 770px) {
+    @media screen and (max-width: 800px) {
       font-size: 14px;
     }
   }
@@ -135,7 +135,7 @@
   height: 400px;
   transition: all 0.15s ease-out;
 
-  @media screen and (max-width: 770px) {
+  @media screen and (max-width: 800px) {
     padding-left: 0;
     height: auto;
   }
@@ -150,7 +150,7 @@
     font-weight: bold;
     font-size: 36px;
 
-    @media screen and (max-width: 770px) {
+    @media screen and (max-width: 800px) {
       font-size: 28px;
     }
   }
@@ -196,7 +196,7 @@
       width: 50%;
     }
 
-    @media screen and (max-width: 770px) {
+    @media screen and (max-width: 800px) {
       width: 100%;
       padding: 25px;
     }
@@ -207,24 +207,6 @@
       line-height: 21px;
       text-decoration: underline;
       margin-top: 30px;
-    }
-  }
-
-  .projectImageContainer {
-    width: 50%;
-    height: 100%;
-    border-radius: 20px;
-    background-image: url('../../assets/HomePage/square-test.png');
-    background-position: center;
-
-    @media screen and (max-width: 1240px) {
-      width: 45%;
-    }
-
-    @media screen and (max-width: 770px) {
-      width: 100%;
-      height: 300px;
-      background-image: url('../../assets/HomePage/baseball.png');
     }
   }
 }
