@@ -5,7 +5,7 @@
   margin-top: 75px;
   flex-wrap: wrap-reverse;
 
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 1000px) {
     margin-top: 50px;
   }
 
@@ -30,7 +30,7 @@
     h1 {
       font-style: normal;
       font-weight: bold;
-      font-size: 48px;
+      font-size: 36px;
       line-height: 71px;
       color: #1D90FF;
       margin-bottom: 30px;
@@ -50,6 +50,7 @@
   width: 62%;
   margin-left: 19%;
   margin-top: 80px;
+  margin-bottom: 80px;
   border-radius: 20px;
   padding: 40px;
 

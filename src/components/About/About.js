@@ -1,8 +1,10 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import styles from './About.module.scss'
 import Pokemon from '../../assets/About/pokemon.jpeg'
 import Resume from '../../assets/Header/Jen_Nathan_Resume.pdf'
 import ThemeContext from "../../contexts/theme"
+import styled from 'styled-components'
+import Movies from './Movies'
 
 function Intro () {
   return (
@@ -30,9 +32,7 @@ function Intro () {
   )
 }
 
-function Contact () {
-  const { theme } = useContext(ThemeContext)
-
+function Contact ({ theme }) {
   return (
     <div className={`${styles.contactContainer} ${theme}ContactCard`}>
       <h6>Lets Talk! ☎</h6>
@@ -50,10 +50,31 @@ function Contact () {
 }
 
 export default function About () {
+  const { theme } = useContext(ThemeContext)
+  const [expanded, setExpanded] = useState(false)
+
   return (
     <div className='contentContainer'>
       <Intro />
-      <Contact />
+      <Contact theme={theme} />
+      {!expanded && <Button theme={theme} onClick={() => setExpanded(true)}>Click for Fun Facts About Me!</Button>}
+      {expanded &&
+        <React.Fragment>
+          <Movies />
+          <p></p>
+        </React.Fragment>
+      }
     </div>
   )
 }
+
+const Button = styled.button`
+  margin: 0 auto;
+  display: block;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: ${props => props.theme === "dark" ? "#121212" : "white"};
+  font-size: 18px;
+  color: #1D90FF;
+  border: 2px solid #1D90FF;
+`

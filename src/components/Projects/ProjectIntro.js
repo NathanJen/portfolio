@@ -37,7 +37,7 @@ const Name = styled.h1`
 
   @media screen and (max-width: 800px) {
     font-size: 36px;
-    margin-top: 75px;
+    margin-top: 50px;
     width: 90%;
     margin-left: 5%;
   }
