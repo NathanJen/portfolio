@@ -12,7 +12,7 @@ export default function Nav ({ menuOpen, toggleMenu }) {
     <React.Fragment>
       <nav>
         <ul className={`${theme}List`}>
-          <li><NavLink to='/journey' onClick={() => menuOpen === true && toggleMenu()}>Work</NavLink></li>
+          <li><NavLink to='/work' onClick={() => menuOpen === true && toggleMenu()}>Work</NavLink></li>
           <li><a href={Resume} rel="noreferrer" target="_blank" onClick={() => menuOpen === true && toggleMenu()}>Resume</a></li>
           <li><NavLink to='/about' onClick={() => menuOpen === true && toggleMenu()}>About</NavLink></li>
         </ul>

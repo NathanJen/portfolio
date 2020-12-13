@@ -21,7 +21,7 @@ function App() {
         <Header />
         <Switch>
           <Route exact path='/about' component={About} />
-          <Route exact path='/journey' component={Journey} />
+          <Route exact path='/work' component={Journey} />
           <Route exact path='/work/cmu-iff' component={FilmFestival} />
           <Route exact path='/work/little-league' component={LittleLeague} />
           <Route exact path='/work/muddy-paws' component={MuddyPaws} />

@@ -3,7 +3,7 @@ import styles from './About.module.scss'
 import Pokemon from '../../assets/About/pokemon.jpeg'
 import Resume from '../../assets/Header/Jen_Nathan_Resume.pdf'
 import ThemeContext from "../../contexts/theme"
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import Movies from './Movies'
 
 function Intro () {
@@ -57,7 +57,14 @@ export default function About () {
     <div className='contentContainer'>
       <Intro />
       <Contact theme={theme} />
-      {!expanded && <Button theme={theme} onClick={() => setExpanded(true)}>Click for Fun Facts About Me!</Button>}
+      {!expanded && 
+        <SVGWrapper onClick={() => setExpanded(true)}>
+          <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+            <Shape height="60" width="320" />
+          </svg>
+          <Text>Click to Learn More About Me!</Text>
+        </SVGWrapper>
+      }
       {expanded &&
         <React.Fragment>
           <Movies />
@@ -68,13 +75,50 @@ export default function About () {
   )
 }
 
-const Button = styled.button`
+// animation inspiration from https://codepen.io/seanmccaffery/pen/xBpbG
+const draw = keyframes`
+  0% {
+    stroke-dasharray: 270 540;
+    stroke-dashoffset: -405;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 4px;
+  }
+`
+
+const Shape = styled.rect`
+  fill: transparent;
+  stroke-dasharray: 270 540;
+  stroke-dashoffset: -405;
+  stroke-width: 8px;
+  stroke: #1D90FF;
+`
+
+const SVGWrapper = styled.div`
+  height: 60px;
   margin: 0 auto;
-  display: block;
-  padding: 10px 15px;
-  border-radius: 10px;
-  background-color: ${props => props.theme === "dark" ? "#121212" : "white"};
-  font-size: 18px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 320px;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover ${Shape} {
+    animation: 0.3s ${draw} linear forwards;
+  }
+`
+
+const Text = styled.p`
   color: #1D90FF;
-  border: 2px solid #1D90FF;
+  font-size: 18px;
+  line-height: 34px;
+  position: relative;
+  top: -48px;
+  text-align: center;
 `
