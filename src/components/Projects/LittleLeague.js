@@ -2,19 +2,12 @@ import React from 'react'
 import styles from './Projects.module.scss'
 import ProjectIntro from './ProjectIntro'
 import Test from '../../assets/Projects/little-league/test.png'
-import { useInView } from 'react-intersection-observer'
 import TextBlock from './TextBlock'
 import FadeIn from '../FadeIn/FadeIn'
 import ImageBlock from './ImageBlock'
+import { Link } from "react-scroll"
 
 export default function LittleLeague () {
-  const [ref, inView] = useInView({ threshold: 0 })
-  const [ref2, inView2] = useInView({ threshold: 0 })
-  const [ref3, inView3] = useInView({ threshold: 0 })
-  const [ref4, inView4] = useInView({ threshold: 0 })
-  const [ref5, inView5] = useInView({ threshold: 0 })
-  const [ref6, inView6] = useInView({ threshold: 0 })
-
   return (
     <div>
       <ProjectIntro
@@ -25,31 +18,10 @@ export default function LittleLeague () {
         team='Corey Emery, Sasha Meng'
       />
       <main>
-        <nav className={styles.sectionNav}>
-          <ol>
-            <li>
-              <a href="#overview" className={inView ? styles.active : null}>Overview</a>
-            </li>
-            <li>
-              <a href="#goals" className={inView2 && !inView ? styles.active : null}>Research</a>
-            </li>
-            <li>
-              <a href="#implementation" className={inView3 && !inView && !inView2 ? styles.active : null}>Synthesis &amp; Analysis</a>
-            </li>
-            <li>
-              <a href="#initial" className={inView4 && !inView && !inView3 ? styles.active : null}>Initial Work</a>
-            </li>
-            <li>
-              <a href="#final" className={inView5 && !inView && !inView4 ? styles.active : null}>Final Designs</a>
-            </li>
-            <li>
-              <a href="#reflection" className={inView6 && !inView && !inView5 ? styles.active : null}>Reflection</a>
-            </li>
-          </ol>
-        </nav>
-        <div inView={inView}>
+        <Nav />
+        <div>
           <FadeIn>
-            <section id="overview" ref={ref} style={{paddingTop: "0px"}}>
+            <section id="overview" style={{paddingTop: "0px"}}>
               <h6>Overview</h6>
               <TextBlock title="Project Description">
                 <p>
@@ -65,7 +37,7 @@ export default function LittleLeague () {
             </section>
           </FadeIn>
           <FadeIn>
-            <section id="goals" ref={ref2}>
+            <section id="research">
               <h6>Research</h6>
               <TextBlock title="Goals">
                 <p>1. What's so bad about the current level of communication?</p>
@@ -97,7 +69,7 @@ export default function LittleLeague () {
             </section>
           </FadeIn>
           <FadeIn>
-            <section id="implementation" ref={ref3}>
+            <section id="synthesis">
               <h6>Synthesis &amp; Analysis</h6>
               <TextBlock title="Customer Journey Map">
                 <p>
@@ -121,7 +93,7 @@ export default function LittleLeague () {
             </section>
           </FadeIn>
           <FadeIn>
-            <section id="initial" ref={ref4}>
+            <section id="initial">
               <h6>Initial Work</h6>
               <TextBlock title="Screen Map">
                 <p>
@@ -145,7 +117,7 @@ export default function LittleLeague () {
             </section>
           </FadeIn>
           <FadeIn>
-            <section id="final" ref={ref5}>
+            <section id="final">
               <h6>Final Designs</h6>
               <TextBlock title="Notification Screen">
                 <p>
@@ -176,7 +148,7 @@ export default function LittleLeague () {
             </section>
           </FadeIn>
           <FadeIn>
-            <section id="reflection" ref={ref6}>
+            <section id="reflection">
               <h6>Reflection</h6>
               <TextBlock title="Future Work">
                 <p>
@@ -197,5 +169,92 @@ export default function LittleLeague () {
         </div>
       </main>
     </div>
+  )
+}
+
+const Nav = () => {
+  return (
+    <nav className={styles.sectionNav}>
+      <ol>
+        <li>
+          <Link
+            activeClass={styles.active}
+            className={styles.navLink}
+            to="overview"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Overview
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass={styles.active}
+            className={styles.navLink}
+            to="research"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Research
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass={styles.active}
+            className={styles.navLink}
+            to="synthesis"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Synthesis &amp; Analysis
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass={styles.active}
+            className={styles.navLink}
+            to="initial"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Initial Work
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass={styles.active}
+            className={styles.navLink}
+            to="final"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Final Designs
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass={styles.active}
+            className={styles.navLink}
+            to="reflection"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Reflection
+          </Link>
+        </li>
+      </ol>
+    </nav>
   )
 }

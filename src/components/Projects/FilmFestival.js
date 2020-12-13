@@ -20,49 +20,7 @@ export default function FilmFestival () {
         team='Shannon Ding'
       />
       <main>
-        <nav className={styles.sectionNav}>
-          <ol>
-            <li>
-              <Link
-                activeClass={styles.active}
-                className={styles.navLink}
-                to="overview"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-              >
-                Overview
-              </Link>
-            </li>
-            <li>
-            <Link
-                activeClass={styles.active}
-                className={styles.navLink}
-                to="goals"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-              >
-                Goals
-              </Link>
-            </li>
-            <li>
-              <Link
-                activeClass={styles.active}
-                className={styles.navLink}
-                to="implementation"
-                spy={true}
-                smooth={true}
-                offset={-100}
-                duration={500}
-              >
-                Implementation
-              </Link>
-            </li>
-          </ol>
-        </nav>
+        <Nav />
         <div>
           <FadeIn>
             <section id="overview">
@@ -137,5 +95,53 @@ export default function FilmFestival () {
         </div>
       </main>
     </div>
+  )
+}
+
+const Nav = () => {
+  return (
+    <nav className={styles.sectionNav}>
+      <ol>
+        <li>
+          <Link
+            activeClass={styles.active}
+            className={styles.navLink}
+            to="overview"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Overview
+          </Link>
+        </li>
+        <li>
+        <Link
+            activeClass={styles.active}
+            className={styles.navLink}
+            to="goals"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Goals
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass={styles.active}
+            className={styles.navLink}
+            to="implementation"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Implementation
+          </Link>
+        </li>
+      </ol>
+    </nav>
   )
 }
