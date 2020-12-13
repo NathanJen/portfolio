@@ -37,6 +37,9 @@ const Name = styled.h1`
 
   @media screen and (max-width: 800px) {
     font-size: 36px;
+    margin-top: 75px;
+    width: 90%;
+    margin-left: 5%;
   }
 `
 
@@ -44,13 +47,28 @@ const Row = styled.div`
   margin-top: 70px;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 500px) {
+    margin-top: 40px;
+  }
 `
 
 const InformationContainer = styled.div`
   text-align: center;
+
+  @media screen and (max-width: 500px) {
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 20px;
+  }
 `
 
 const Title = styled.p`
   font-size: 24px;
   font-weight: bold;
+
+  @media screen and (max-width: 500px) {
+    font-size: 18px;
+  }
 `
