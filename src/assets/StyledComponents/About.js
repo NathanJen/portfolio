@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const SectionTitle = styled.h1`
-  font-family: Circe;
+  font-family: Poppins;
   font-weight: bold;
   font-size: 36px;
   color: #1D90FF;
