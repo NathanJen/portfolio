@@ -1,54 +1,56 @@
 import React from 'react'
-
-const styles = {
-  // heroImg: {
-  //   width: '100%',
-  // },
-  img: {
-    width: '100%',
-  },
-  name: {
-    marginTop: '70px',
-    fontSize: '48px',
-    fontWeight: 'bold',
-    textAlign: 'center',
-    wordSpacing: '10px'
-  },
-  row: {
-    marginTop: '70px',
-    display: 'flex',
-    justifyContent: 'space-evenly'
-  },
-  informationContainer: {
-    textAlign: 'center'
-  },
-  informationTitle: {
-    fontSize: '24px',
-    fontWeight: 'bold'
-  }
-}
+import styled from 'styled-components'
 
 export default function ProjectIntro ({ image, name, timeline, role, team }) {
   return (
     <React.Fragment>
-      {/* <div style={styles.heroImg}> */}
-        <img style={styles.img} src={image} alt="Project hero" />
-      {/* </div> */}
-      <h1 style={styles.name}>{name}</h1>
-      <div style={styles.row}>
-        <div style={styles.informationContainer}>
-          <p style={styles.informationTitle}>Timeline:</p>
+      <HeroImg src={image} alt="Project hero" />
+      <Name>{name}</Name>
+      <Row>
+        <InformationContainer>
+          <Title>Timeline:</Title>
           <p>{timeline}</p>
-        </div>
-        <div style={styles.informationContainer}>
-          <p style={styles.informationTitle}>Role:</p>
+        </InformationContainer>
+        <InformationContainer>
+          <Title>Role:</Title>
           <p>{role}</p>
-        </div>
-        <div style={styles.informationContainer}>
-          <p style={styles.informationTitle}>Team:</p>
+        </InformationContainer>
+        <InformationContainer>
+          <Title>Team:</Title>
           <p>{team}</p>
-        </div>
-      </div>
+        </InformationContainer>
+      </Row>
     </React.Fragment>
   )
 }
+
+const HeroImg = styled.img`
+  width: 100%;
+`
+
+const Name = styled.h1`
+  margin-top: 70px;
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  word-spacing: 10px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 36px;
+  }
+`
+
+const Row = styled.div`
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-evenly;
+`
+
+const InformationContainer = styled.div`
+  text-align: center;
+`
+
+const Title = styled.p`
+  font-size: 24px;
+  font-weight: bold;
+`
