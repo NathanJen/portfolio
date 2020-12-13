@@ -116,7 +116,7 @@ const Nav = () => {
           </Link>
         </li>
         <li>
-        <Link
+          <Link
             activeClass={styles.active}
             className={styles.navLink}
             to="goals"

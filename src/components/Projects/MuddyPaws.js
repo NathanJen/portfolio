@@ -1,15 +1,12 @@
 import React from 'react'
 import styles from './Projects.module.scss'
 import ProjectIntro from './ProjectIntro'
-import { useInView } from 'react-intersection-observer'
 import TextBlock from './TextBlock'
 import Test from '../../assets/Projects/cmu-iff/test.png'
 import FadeIn from '../FadeIn/FadeIn'
+import { Link } from "react-scroll"
 
 export default function FilmFestival () {
-  const [ref, inView] = useInView({ threshold: 0 })
-  const [ref2, inView2] = useInView({ threshold: 0 })
-  const [ref3, inView3] = useInView({ threshold: 0 })
 
   return (
     <div>
@@ -21,28 +18,10 @@ export default function FilmFestival () {
         team='Me :)'
       />
       <main>
-        <nav className={styles.sectionNav}>
-          <ol>
-            <li>
-              <a href="#overview" className={inView ? styles.active : null}>Overview</a>
-            </li>
-            <li>
-              <a href="#paper" className={inView ? styles.active : null}>Paper Prototyping</a>
-            </li>
-            <li>
-              <a href="#goals" className={inView2 ? styles.active : null}>Prototyping with Figma</a>
-            </li>
-            <li>
-              <a href="#implementation" className={inView3 ? styles.active : null}>HTML / CSS Prototypes</a>
-            </li>
-            <li>
-              <a href="#implementation" className={inView3 ? styles.active : null}>Final Prototypes with React</a>
-            </li>
-          </ol>
-        </nav>
-        <div inView={inView}>
+        <Nav />
+        <div >
           <FadeIn>
-            <section id="overview" ref={ref}>
+            <section id="overview" >
               <h6>Overview</h6>
               <TextBlock title="Project Description">
                 <p>
@@ -54,7 +33,7 @@ export default function FilmFestival () {
             </section>
           </FadeIn>
           <FadeIn>
-            <section id="paper" ref={ref2}>
+            <section id="paper" >
               <h6>Paper Prototyping</h6>
               <TextBlock title="Initial Work">
                 <p>
@@ -91,7 +70,7 @@ export default function FilmFestival () {
             </section>
           </FadeIn>
           <FadeIn>
-            <section id="paper" ref={ref2}>
+            <section id="paper" >
               <h6>Prototyping with Figma</h6>
               <TextBlock title="Initial Work">
                 <p>
@@ -106,7 +85,7 @@ export default function FilmFestival () {
             </section>
           </FadeIn>
           <FadeIn>
-            <section id="paper" ref={ref2}>
+            <section id="paper" >
               <h6>HTML / CSS Prototypes</h6>
               <TextBlock title="Initial Work">
                 <p>
@@ -121,7 +100,7 @@ export default function FilmFestival () {
             </section>
           </FadeIn>
           <FadeIn>
-            <section id="paper" ref={ref2}>
+            <section id="paper" r>
               <h6>Final Prototypes with React</h6>
               <TextBlock title="Initial Work">
                 <p>
@@ -138,5 +117,79 @@ export default function FilmFestival () {
         </div>
       </main>
     </div>
+  )
+}
+
+const Nav = () => {
+  return (
+    <nav className={styles.sectionNav}>
+      <ol>
+        <li>
+          <Link
+            activeClass={styles.active}
+            className={styles.navLink}
+            to="overview"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Overview
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass={styles.active}
+            className={styles.navLink}
+            to="paper"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Paper Prototyping
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass={styles.active}
+            className={styles.navLink}
+            to="figma"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Prototyping with Figma
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass={styles.active}
+            className={styles.navLink}
+            to="html"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            HTML / CSS Prototypes
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass={styles.active}
+            className={styles.navLink}
+            to="react"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+          >
+            Final Prototypes with React
+          </Link>
+        </li>
+      </ol>
+    </nav>
   )
 }
