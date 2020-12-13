@@ -49,7 +49,7 @@ export default function LittleLeague () {
         </nav>
         <div inView={inView}>
           <FadeIn>
-            <section id="overview" ref={ref}>
+            <section id="overview" ref={ref} style={{paddingTop: "0px"}}>
               <h6>Overview</h6>
               <TextBlock title="Project Description">
                 <p>

@@ -93,7 +93,7 @@ const Shape = styled.rect`
   fill: transparent;
   stroke-dasharray: 270 540;
   stroke-dashoffset: -405;
-  stroke-width: 8px;
+  stroke-width: 6px;
   stroke: #1D90FF;
 `
 

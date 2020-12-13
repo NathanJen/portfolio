@@ -50,7 +50,7 @@ const Row = styled.div`
   flex-wrap: wrap;
 
   @media screen and (max-width: 500px) {
-    margin-top: 40px;
+    margin-top: 100px;
   }
 `
 

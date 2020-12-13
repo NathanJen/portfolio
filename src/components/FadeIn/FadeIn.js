@@ -26,7 +26,7 @@ export default function FadeIn(props) {
 
 const Fade = styled.div`
   opacity: 0;
-  transform: translateY(12vh);
+  transform: translateY(10vh);
   visibility: hidden;
   transition: opacity 0.6s ease-out, transform 1.2s ease-out;
   will-change: opacity, visibility;
