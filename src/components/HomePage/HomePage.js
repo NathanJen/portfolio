@@ -18,7 +18,7 @@ function Intro () {
           <a href='https://www.hcii.cmu.edu/' className={styles.cmu} rel="noreferrer" target="_blank">Carnegie Mellon</a>.
         </p>
         <p>
-          * Fall 2020 pieces coming soon! (I hope)
+          * Site under construction 🚧 Check back soon for updates!
         </p>
       </div>
       <div className={styles.headshotContainer}>
