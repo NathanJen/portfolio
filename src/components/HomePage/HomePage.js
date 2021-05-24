@@ -21,7 +21,7 @@ function Intro () {
           * Site under construction 🚧 Check back soon for updates!
         </p>
         <p>
-          PS: I get that waiting is hard, so please visit <a href='nathanjen.com'>my old website</a> if you're curious about what I have done!
+          PS: I get that waiting is hard, so please visit <a href='https://www.nathanjen.com' className={styles.cmu} rel="noreferrer" target="_blank">my old website</a> if you're curious about what I have done!
         </p>
       </div>
       <div className={styles.headshotContainer}>
