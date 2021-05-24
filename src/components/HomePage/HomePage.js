@@ -18,7 +18,10 @@ function Intro () {
           <a href='https://www.hcii.cmu.edu/' className={styles.cmu} rel="noreferrer" target="_blank">Carnegie Mellon</a>.
         </p>
         <p>
-          * Site under construction 🚧 Check back soon for updates! (Please visit nathanjen.com for my old website!)
+          * Site under construction 🚧 Check back soon for updates!
+        </p>
+        <p>
+          PS: I get that waiting is hard, so please visit <a href='nathanjen.com'>my old website</a> if you're curious about what I have done!
         </p>
       </div>
       <div className={styles.headshotContainer}>
